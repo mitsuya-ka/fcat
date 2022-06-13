@@ -80,6 +80,7 @@ param (
 )
 Begin {
 	[Void] $PSBoundParameters.Remove('Pattern')
+	$PSBoundParameters['Encoding'] = $Encoding
 }
 process {
 	$p = @(Get-Content @PSBoundParameters)
